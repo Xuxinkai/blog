@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>blog_wap</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>cn.arice.com.filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>bm</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>IsLoginFilter</filter-name>
+    <filter-class>cn.arice.com.filter.IsLoginFilter</filter-class>
+  
+  </filter>
+  <filter-mapping>
+    <filter-name>IsLoginFilter</filter-name>
+    <url-pattern>/bg/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.page_wap.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/page_wap/home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ArticleDetailServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.page_wap.ArticleDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArticleDetailServlet</servlet-name>
+    <url-pattern>/page_wap/article_detail</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ArticleCommentServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.page_wap.ArticleCommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SigninServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.SigninServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BGHomeServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.BGHomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PersonalInfoServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.PersonalInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserListServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.UserListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HistoryInfoServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.HistoryInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SignoutServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.SignoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewUserServlet</servlet-name>
+    <servlet-class>cn.arice.com.servlet.bg.NewUserServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ArticleCommentServlet</servlet-name>
+    <url-pattern>/page_wap/article_comment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SigninServlet</servlet-name>
+    <url-pattern>/bg/Signin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BGHomeServlet</servlet-name>
+    <url-pattern>/bg/bghome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PersonalInfoServlet</servlet-name>
+    <url-pattern>/bg/personal_info</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/bg/Index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserListServlet</servlet-name>
+    <url-pattern>/bg/user_list</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HistoryInfoServlet</servlet-name>
+    <url-pattern>/bg/history_info</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignoutServlet</servlet-name>
+    <url-pattern>/bg/signout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewUserServlet</servlet-name>
+    <url-pattern>/bg/new_user</url-pattern>
+  </servlet-mapping>
+</web-app>
